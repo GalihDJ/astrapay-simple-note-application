@@ -2,7 +2,6 @@ package com.astrapay.service;
 
 import com.astrapay.entity.SimpleNote;
 import com.astrapay.exception.DuplicateNoteTitleException;
-import com.astrapay.exception.InvalidNoteException;
 import com.astrapay.exception.NoteNotFoundException;
 import com.astrapay.dto.SimpleNoteDto;
 
@@ -30,20 +29,15 @@ public class SimpleNoteService {
     // add new note
     public SimpleNote createSimpleNote(SimpleNoteDto simpleNoteDto){
 
-        // check if title or content is empty
-        if (simpleNoteDto.getNoteTitle() == null || simpleNoteDto.getNoteTitle().trim().isEmpty() ||
-            simpleNoteDto.getNoteContent() == null || simpleNoteDto.getNoteContent().trim().isEmpty()) {
-            throw new InvalidNoteException("Note title and content cannot be empty");
-        }
-
         // check if note title is already used
         boolean noteTitleExist = simpleNotes.stream().anyMatch(simpleNote -> simpleNote.getNoteTitle().equalsIgnoreCase(simpleNoteDto.getNoteTitle()));
         if (noteTitleExist){
             throw new DuplicateNoteTitleException("Note title is already used");
         }
 
+        // increment counter for ID
         SimpleNote simpleNote = new SimpleNote(counter.incrementAndGet(), simpleNoteDto.getNoteTitle(), simpleNoteDto.getNoteContent());
-        
+
         simpleNotes.add(simpleNote);
         return simpleNote;
     }

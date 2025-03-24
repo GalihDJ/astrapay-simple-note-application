@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor 
+@NoArgsConstructor
 public class SimpleNoteDto {
 
     @NotBlank(message = "Note title cannot be blank")

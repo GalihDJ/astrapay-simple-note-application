@@ -14,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import io.swagger.annotations.Api;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -36,9 +36,7 @@ public class SimpleNoteController {
 
     // create a new note
     @PostMapping
-    public ResponseEntity<SimpleNote> createSimpleNote(@Valid @RequestBody SimpleNoteDto simpleNoteDto){
-        System.out.println("Received Title: " + simpleNoteDto.getNoteTitle());
-        System.out.println("Received Content: " + simpleNoteDto.getNoteContent());
+    public ResponseEntity<SimpleNote> createSimpleNote(@RequestBody @Valid SimpleNoteDto simpleNoteDto){
         SimpleNote simpleNote = simpleNoteService.createSimpleNote(simpleNoteDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(simpleNote);
     }
