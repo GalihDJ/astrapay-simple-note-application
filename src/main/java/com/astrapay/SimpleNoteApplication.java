@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AstrapayBaseExternal {
+public class SimpleNoteApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AstrapayBaseExternal.class, args);
+        SpringApplication.run(SimpleNoteApplication.class, args);
     }
 }
