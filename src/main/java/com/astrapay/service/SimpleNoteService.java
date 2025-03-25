@@ -35,7 +35,7 @@ public class SimpleNoteService {
             throw new DuplicateNoteTitleException("Note title is already used");
         }
 
-        // increment counter for ID
+        // increment counter for id
         SimpleNote simpleNote = new SimpleNote(counter.incrementAndGet(), simpleNoteDto.getNoteTitle(), simpleNoteDto.getNoteContent());
 
         simpleNotes.add(simpleNote);

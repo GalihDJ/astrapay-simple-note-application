@@ -2,16 +2,19 @@ package com.astrapay.entity;
 
 public class SimpleNote {
 
+    // variables
     private long noteId;
     private String noteTitle;
     private String noteContent;
 
+    // constructor
     public SimpleNote(long noteId, String noteTitle, String noteContent){
         this.noteId = noteId;
         this.noteTitle = noteTitle;
         this.noteContent = noteContent;
     }
 
+    // getter and setter
     public Long getNoteId(){
         return noteId;
     }

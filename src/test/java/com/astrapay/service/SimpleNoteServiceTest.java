@@ -28,22 +28,23 @@ public class SimpleNoteServiceTest {
         assertTrue(result.isEmpty());
     }
 
-    // create a note - success
+    // create a note with valid inputs
     @Test
     void createASimpleNote_withValidInputs_shouldBeSuccessful(){
 
-        SimpleNoteDto simpleNoteDto = new SimpleNoteDto("Test Title", "Test Content");
+        SimpleNoteDto simpleNoteDto = new SimpleNoteDto("Test Valid Title", "Test Valid Content");
         SimpleNote result = simpleNoteService.createSimpleNote(simpleNoteDto);
-        assertEquals("Test Title", result.getNoteTitle());
-        assertEquals("Test Content", result.getNoteContent());
+
+        assertEquals("Test Valid Title", result.getNoteTitle());
+        assertEquals("Test Valid Content", result.getNoteContent());
         assertNotNull(result);
     }
 
     // get all notes after successfully creating one
     @Test
-    void createASimpleNote_withValidInput_getNoteAfterCreate_shouldBeSuccessful(){
+    void createASimpleNote_withValidInputs_getNoteAfterCreate_shouldBeSuccessful(){
 
-        SimpleNoteDto simpleNoteDto = new SimpleNoteDto("Test Title", "Test Content");
+        SimpleNoteDto simpleNoteDto = new SimpleNoteDto("Test Valid Title", "Test Valid Content");
         simpleNoteService.createSimpleNote(simpleNoteDto);
 
         List<SimpleNote> result = simpleNoteService.getAllSimpleNotes();
@@ -78,6 +79,7 @@ public class SimpleNoteServiceTest {
     // delete a note with non-existing id
     @Test
     void deleteASimpleNote_withNonExistingId_shouldFail(){
+
         assertThrows(NoteNotFoundException.class, () -> {
             simpleNoteService.deleteSimpleNote(100L);
         });
