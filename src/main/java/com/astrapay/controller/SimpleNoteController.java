@@ -37,6 +37,7 @@ public class SimpleNoteController {
     // create a new note
     @PostMapping
     public ResponseEntity<SimpleNote> createSimpleNote(@RequestBody @Valid SimpleNoteDto simpleNoteDto){
+
         SimpleNote simpleNote = simpleNoteService.createSimpleNote(simpleNoteDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(simpleNote);
     }
@@ -44,6 +45,7 @@ public class SimpleNoteController {
     // delete a note by id
     @DeleteMapping("/{noteId}")
     public ResponseEntity<Void> deleteSimpleNote(@PathVariable Long noteId){
+
         simpleNoteService.deleteSimpleNote(noteId);
         return ResponseEntity.noContent().build();
     }

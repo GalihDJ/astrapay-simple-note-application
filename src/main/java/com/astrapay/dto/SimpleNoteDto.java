@@ -1,6 +1,7 @@
 package com.astrapay.dto;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +11,11 @@ import lombok.NoArgsConstructor;
 public class SimpleNoteDto {
 
     @NotBlank(message = "Note title cannot be blank")
+    @Size(max = 100, message = "Note title cannot exceed 100 characters")
     private String noteTitle;
 
     @NotBlank(message = "Note content cannot be blank")
+    @Size(max = 1000, message = "Note content cannot exceed 1000 characters")
     private String noteContent;
 
     public SimpleNoteDto(String noteTitle, String noteContent){
