@@ -18,12 +18,12 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 
 
-* To build and run enter the command below:
+* To build and run, enter the command below:
 ```bash
    mvn spring-boot:run
 ```
 
-* Alternate way is to naviage to SimpleNoteApplication.java and click the green arrow or by pressing Ctrl+Shift+F10 on Windows
+* Alternative way is to navigate to SimpleNoteApplication.java and click the green arrow or by pressing Ctrl+Shift+F10 on Windows
 ![img.png](screenshots/img.png)
 
 
@@ -34,7 +34,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Testing API with Postman
 
-* To test the APIs with Postman you need to [import](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/) the Postman collection provided to your Postman
+* To test the APIs with Postman, you need to [import](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/) the Postman collection provided to your Postman
 
 
 * GET
@@ -68,10 +68,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Run Unit Test
 
-* To run unit test enter the command below:
+* To run unit test, enter the command below:
 ```bash
    mvn test
 ``` 
 
-* Alternate way is to navigate to test java file and click the green arrow or by pressing Ctrl+Shift+F10 on Windows
+* Alternative way is to navigate to test java file and click the green arrow or by pressing Ctrl+Shift+F10 on Windows
 ![img_1.png](screenshots/img_1.png)
