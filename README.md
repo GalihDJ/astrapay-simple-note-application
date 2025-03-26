@@ -37,8 +37,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Testing API with Postman
 
-* To test the APIs with Postman you need to import the Postman collection provided to your Postman
-  https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/
+* To test the APIs with Postman you need to [import](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/) the Postman collection provided to your Postman
 
 
 * GET
