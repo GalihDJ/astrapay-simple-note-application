@@ -1,9 +1,6 @@
 # Spring Boot Astrapay - Simple Notes Project
 A simple RESTful API project to create, read, and delete note written in Java Spring Boot.
 
-#### Author Information:  
-- Galih Damar Jati
-
 ## Prerequisites
 - Java 17+
 - Maven 3.8+
